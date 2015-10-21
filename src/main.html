@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Recreation.gov Reserver</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        width: 400px;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+      h1 {
+        font-size: 90%;
+      }
+      .input-row {
+        overflow: auto;
+        width: 100%;
+      }
+      .input-row label {
+        float: left;
+        width: 35%;
+        text-align: right;
+      }
+      .input-row input {
+        float: left;
+        width: 55%;
+      }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script src="main.js"></script>
+
+  </head>
+  <body>
+    <h1>Recreation.gov Reserver</h1>
+
+    <input type="hidden" id="contractCode" value="NRSO" />
+    <div class="input-row">
+      <label for="parkId">park id:</label>
+      <input type="text" id="parkId" value="70950" />
+    </div>
+    <div class="input-row">
+      <label for="siteId">site id:</label>
+      <input type="text" id="siteId" value="206524" />
+    </div>
+    <div class="input-row">
+      <label for="arvdate">arrival date:</label>
+      <input type="text" id="arvdate" value="10/21/2016" />
+    </div>
+    <div class="input-row">
+      <label for="lengthOfStay">length of stay:</label>
+      <input type="text" id="lengthOfStay" value="4" />
+    </div>
+
+    <button id="go">go</button>
+
+    <div id="status"></div>
+
+    <!--<img id="image-result" hidden>-->
+  </body>
+</html>
+
